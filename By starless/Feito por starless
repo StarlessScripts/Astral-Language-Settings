@@ -35,9 +35,9 @@ local Tab = Window:Tab({
     Icon = "book-a", -- lucide or rbxassetid
 })
 local Dropdown = Tab:Dropdown({
-    Title = "Dropdown",
-    Desc = "Dropdown Desc",
-    Value = "Tab 1",
+    Title = "Select language",
+    Desc = "",
+    Value = "None",
     Multi = false,
     AllowNone = true,
     Values = {
