@@ -1,0 +1,53 @@
+_G.Key = "AstralTeam"
+local WindUI = loadstring(game:HttpGet("https://tree-hub.vercel.app/api/UI/WindUI"))()
+local Window = WindUI:CreateWindow({
+    Title = "AstralHub | language settings", -- UI Title
+    Icon = "door-open", -- Url or rbxassetid or lucide
+    Author = ".starless", -- Author & Creator
+    Folder = "CloudHub", -- Folder name for saving data (And key)
+    Size = UDim2.fromOffset(560, 350), -- UI Size
+    KeySystem = { -- Creates key system
+        Key = "AstralTeam", -- key
+        Note = "The key (AstralTeam)", -- Note
+        URL = "https://github.com/Footagesus/WindUI", -- URL To get key (example: Discord)
+        SaveKey = true, -- Saves the key in the folder specified above
+    }, 
+    Transparent = true,-- UI Transparency
+    Theme = "Dark", -- UI Theme
+    SideBarWidth = 170, -- UI Sidebar Width (number)
+    HasOutline = true, -- Adds Oultines to the window
+})
+Window:EditOpenButton({
+    Title = "Open Astral Language settings",
+    Icon = "door-closed",
+    Color = ColorSequence.new(
+        Color3.fromHex("FFFFFF"), 
+        Color3.fromHex("000000")
+    )
+})
+local Notification = WindUI:Notify({
+    Title = "💫 | AstralBot Says",
+    Content = "Click on X From the Ui when u select ur language",
+    Duration = 15,
+})
+local Tab = Window:Tab({
+    Title = "Language",
+    Icon = "book-a", -- lucide or rbxassetid
+})
+local Dropdown = Tab:Dropdown({
+    Title = "Dropdown",
+    Desc = "Dropdown Desc",
+    Value = "Tab 1",
+    Multi = false,
+    AllowNone = true,
+    Values = {
+        "🇧🇷 Pt-br", "🇬🇸 En-Usa"
+    },
+    Callback = function(selected)
+        if selected == "🇬🇸 En-Usa" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/StarlessScripts/Example-En/refs/heads/main/Made%20by%20starless"))()
+        elseif selected == "🇧🇷 Pt-br" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/StarlessScripts/Example-Pt-br/refs/heads/main/Feito%20por%20starless"))()
+        end
+    end
+})
