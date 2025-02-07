@@ -10,7 +10,7 @@ local Window = WindUI:CreateWindow({
         Key = "AstralTeam", -- key
         Note = "The key (AstralTeam)", -- Note
         URL = "https://github.com/Footagesus/WindUI", -- URL To get key (example: Discord)
-        SaveKey = false, -- Saves the key in the folder specified above
+        SaveKey = true, -- Saves the key in the folder specified above
     }, 
     Transparent = true,-- UI Transparency
     Theme = "Dark", -- UI Theme
